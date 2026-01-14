@@ -3,335 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhab Construction | Your Partner in Infrastructural Development</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Elysian Builders | Luxury Custom Homes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Dhab<span>Construction</span></a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="invest.html">Invest</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">E</div>
+                    <span class="logo-text">Elysian Builders</span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section with Single Background Image -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-        <div class="hero-content">
-            <h1>Your Partner in Infrastructural Development</h1>
-            <p>Delivering lasting value through quality construction and design</p>
-            <a href="portfolio.html" class="btn">Explore Our Projects</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Architectural Excellence, Crafted for Life</h1>
+                    <p class="hero-subtitle">We design and build exceptional custom homes that blend innovative architecture with uncompromising craftsmanship, creating timeless spaces for modern living.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Begin Your Project</a>
+                        <a href="#projects" class="btn btn-secondary">View Our Work</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Custom Homes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-viewer">
+                    <div class="viewer-container">
+                        <div class="viewer-overlay">
+                            <div class="viewer-info">
+                                <span class="viewer-label">Interactive Tour</span>
+                                <span class="viewer-hint">Drag to rotate • Tap to explore</span>
+                            </div>
+                        </div>
+                        <div class="image-viewer" id="imageViewer">
+                            <img src="" alt="360° Home View" id="currentImage" class="viewer-image">
+                            <div class="viewer-loader">
+                                <div class="loader-spinner"></div>
+                                <span>Loading Experience...</span>
+                            </div>
+                        </div>
+                        <div class="viewer-controls">
+                            <button class="control-btn" id="pauseBtn" aria-label="Pause rotation">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <div class="rotation-indicator">
+                                <div class="indicator-dot active"></div>
+                                <div class="indicator-dot"></div>
+                                <div class="indicator-dot"></div>
+                                <div class="indicator-dot"></div>
+                                <div class="indicator-dot"></div>
+                                <div class="indicator-dot"></div>
+                            </div>
+                            <button class="control-btn" id="fullscreenBtn" aria-label="Fullscreen">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Our Company</h2>
+            <div class="section-header">
+                <h2 class="section-title">Redefining Luxury Living</h2>
+                <p class="section-subtitle">Where visionary design meets meticulous craftsmanship</p>
             </div>
+            
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dhab Construction Team">
-                </div>
                 <div class="about-text">
-                    <h3>Advanced Solutions for Essential Construction Projects</h3>
-                    <p>We are a leading construction company based in South Sudan, specializing in delivering end-to-end solutions for residential, commercial, and infrastructural projects. With a commitment to innovation, quality, and timely delivery, we build lasting structures that empower communities and drive progress.</p>
-                    <p>With over 120 years of combined professional experience among our team members, Dhab Construction has become a trusted partner in building essential infrastructure that empowers communities and drives sustainable development across South Sudan and Eastern Africa.</p>
-                    <a href="about.html" class="btn">Learn More About Us</a>
+                    <h3>Building Tomorrow's Heritage</h3>
+                    <p>For over two decades, Elysian Builders has transformed architectural visions into breathtaking realities. Our approach combines cutting-edge technology with time-honored techniques to create homes that stand as testaments to quality and innovation.</p>
+                    <p>Every project begins with deep collaboration, ensuring your home reflects your lifestyle, values, and aspirations while meeting the highest standards of sustainability and performance.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Award-Winning</h4>
+                                <p>Recognized by AIA & NAHB</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Sustainable Design</h4>
+                                <p>LEED Certified Projects</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Lifetime Warranty</h4>
+                                <p>On all structural work</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Complete Projects</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">On-Time Delivery Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">120+</div>
-                    <div class="stat-label">Team Members</div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-0437884474e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Architecture" loading="lazy">
+                    <div class="image-overlay">
+                        <span>Since 1998</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Core Services</h2>
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Services</h2>
+                <p class="section-subtitle">From concept to completion, we handle every detail</p>
             </div>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residential Construction">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Residential Construction</h3>
-                        <p>Building modern homes with precision and care, creating comfortable living spaces for families across South Sudan.</p>
-                        <a href="services.html" class="btn">Explore Design</a>
-                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Custom architectural solutions that blend aesthetic vision with functional excellence, tailored to your site and lifestyle.</p>
+                    <a href="#" class="service-link">Explore Design Process →</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Construction">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Commercial Construction</h3>
-                        <p>End-to-end real estate solutions for businesses, from office complexes to shopping malls and commercial towers.</p>
-                        <a href="services.html" class="btn">Explore Design</a>
-                    </div>
+                    <h3>Custom Home Building</h3>
+                    <p>Complete turnkey construction with premium materials and unparalleled attention to detail throughout every phase.</p>
+                    <a href="#" class="service-link">View Construction Timeline →</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Infrastructure Development">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Infrastructure Development</h3>
-                        <p>Building the backbone of cities with roads, bridges, and essential public works that connect communities.</p>
-                        <a href="services.html" class="btn">Explore Design</a>
-                    </div>
+                    <h3>Renovation & Restoration</h3>
+                    <p>Transform existing spaces while preserving character, integrating modern amenities with historical integrity.</p>
+                    <a href="#" class="service-link">See Before & After →</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Institutions">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Community Institutions</h3>
-                        <p>Creating schools, hospitals, and civic facilities that empower education, healthcare, and community well-being.</p>
-                        <a href="services.html" class="btn">Explore Design</a>
-                    </div>
+                    <h3>Sustainable Solutions</h3>
+                    <p>Energy-efficient designs and smart home integration for comfortable, sustainable, and future-ready living.</p>
+                    <a href="#" class="service-link">Learn About Sustainability →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Featured Projects</h2>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A portfolio of exceptional residential architecture</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Residential Complex">
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cliffside Residence" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Details</span>
+                        </div>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3>Juba Residential Complex</h3>
-                        <p>Modern housing development with 50 units</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Tower">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>City Center Office Tower</h3>
-                        <p>12-story commercial building in central Juba</p>
+                    <div class="project-info">
+                        <h3>Cliffside Residence</h3>
+                        <p>Malibu, California</p>
+                        <span class="project-year">2023</span>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bridge Project">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern Farmhouse" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Details</span>
+                        </div>
                     </div>
-                    <div class="portfolio-overlay">
-                        <h3>Nile River Bridge</h3>
-                        <p>250m bridge connecting communities</p>
+                    <div class="project-info">
+                        <h3>Modern Farmhouse</h3>
+                        <p>Napa Valley, California</p>
+                        <span class="project-year">2022</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Urban Loft" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Urban Loft</h3>
+                        <p>San Francisco, California</p>
+                        <span class="project-year">2023</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mountain Retreat" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mountain Retreat</h3>
+                        <p>Lake Tahoe, California</p>
+                        <span class="project-year">2022</span>
                     </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="portfolio.html" class="btn">View All Portfolio</a>
+            
+            <div class="projects-cta">
+                <a href="#" class="btn btn-secondary">View Full Portfolio</a>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>Latest Insights</h2>
+            <div class="section-header">
+                <h2 class="section-title">Client Experiences</h2>
+                <p class="section-subtitle">Trusted by discerning homeowners worldwide</p>
             </div>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meet the CEO">
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"Elysian Builders transformed our vision into a home that exceeds all expectations. Their attention to detail and commitment to quality is remarkable."</p>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">March 21, 2025</span>
-                            <span class="blog-author">By Admin</span>
-                        </div>
-                        <h3>Meet the CEO</h3>
-                        <p>Meet Majuoy Tuak Dhab Bithuok: The Visionary Leader Behind Dhab Construction. At Dhab Construction, we believe that building is more than just erecting structures...</p>
-                        <button class="read-more">Read More <i class="fas fa-chevron-down"></i></button>
-                        <div class="blog-full-content">
-                            <p>At Dhab Construction, we believe that building is more than just erecting structures—it's about creating opportunities, shaping communities, and leaving a lasting legacy. At the helm of our mission is our CEO, Majuoy Tuak Dhab Bithuok, a passionate and accomplished leader whose journey reflects dedication to excellence and innovation in the construction industry.</p>
-                            <p>Under his leadership, Dhab Construction has grown from a small local contractor to a leading construction company in South Sudan, undertaking prestigious projects that are transforming the nation's infrastructure.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" loading="lazy">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Tech Executive, Silicon Valley</p>
                         </div>
                     </div>
                 </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Development">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Working with Elysian was seamless from start to finish. They delivered our dream home on schedule and within budget. Exceptional craftsmanship throughout."</p>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">November 25, 2024</span>
-                            <span class="blog-author">By Admin</span>
-                        </div>
-                        <h3>Learning from Addis Ababa</h3>
-                        <p>The transformation of Addis Ababa through strategic infrastructure development has captured the attention of leaders across Africa...</p>
-                        <button class="read-more">Read More <i class="fas fa-chevron-down"></i></button>
-                        <div class="blog-full-content">
-                            <p>The transformation of Addis Ababa through strategic infrastructure development has captured the attention of leaders across Africa, including South Sudan's Minister of Land, Housing, and Urban Development, Michael Chanjiek. Speaking during the inaugural Africa Urban Forum held in Addis Ababa from September 4-6, 2024, Minister Chanjiek emphasized the importance of learning from Ethiopia's capital to inform South Sudan's own urban development strategies.</p>
-                            <p>Addis Ababa's rapid transformation offers valuable lessons in urban planning, infrastructure development, and sustainable growth that can be adapted to South Sudan's unique context as the nation works to rebuild and develop its cities.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" loading="lazy">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Interior Designer, New York</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="blog.html" class="btn">See Our Blog</a>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The team's architectural expertise and innovative solutions turned a challenging hillside plot into our perfect family home. Simply outstanding."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="David Rodriguez" loading="lazy">
+                        <div>
+                            <h4>David Rodriguez</h4>
+                            <p>Entrepreneur, Miami</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Invest Section -->
-    <section class="invest">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="invest-content">
-                <div class="section-title">
-                    <h2>Invest in Dhab Construction</h2>
-                </div>
-                <p>We are inviting forward-thinking investors to join us in shaping the future of South Sudan's booming construction and real estate market. By purchasing shares in our company, you're not only investing in a trusted name with 120+ years of combined industry experience but also in a future filled with growth, innovation, and unparalleled opportunities.</p>
-                <a href="invest.html" class="btn">Invest Your Future</a>
+            <div class="cta-content">
+                <h2>Ready to Create Your Masterpiece?</h2>
+                <p>Schedule a consultation with our design team to discuss your vision and begin the journey to your dream home.</p>
+                <a href="#contact" class="btn btn-primary btn-large">Start Your Journey</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
+            <div class="section-header">
+                <h2 class="section-title">Begin the Conversation</h2>
+                <p class="section-subtitle">Let's discuss your vision for an exceptional home</p>
             </div>
-            <div class="contact-container">
+            
+            <div class="contact-content">
                 <div class="contact-info">
+                    <h3>Get In Touch</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h3>Our Location</h3>
-                                <p>Dynasty House, 1st Floor, Bilpam Road, Juba, South Sudan</p>
+                                <h4>Visit Our Studio</h4>
+                                <p>123 Design Avenue<br>San Francisco, CA 94107</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                            <i class="fas fa-phone"></i>
                             <div>
-                                <h3>Phone Number</h3>
-                                <p>+211 917 119 426</p>
+                                <h4>Call Us</h4>
+                                <p>(415) 555-0123<br>Mon-Fri, 9am-6pm PST</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                            <i class="fas fa-envelope"></i>
                             <div>
-                                <h3>Email Address</h3>
-                                <p>info@dhabconstruction.com</p>
+                                <h4>Email</h4>
+                                <p>hello@elysianbuilders.com<br>Response within 24 hours</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="Houzz"><i class="fab fa-houzz"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select id="projectType" name="projectType">
+                            <option value="" disabled selected>Project Type</option>
+                            <option value="new-build">New Construction</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="addition">Addition</option>
+                            <option value="design-only">Design Only</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your vision..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">Dhab<span>Construction</span></div>
-                    <p>Your trusted partner in infrastructural development across South Sudan and Eastern Africa. We build lasting structures that empower communities and drive progress.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">E</div>
+                    <span>Elysian Builders</span>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Design Process</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Licenses</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="invest.html">Invest</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3 class="footer-heading">Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Dynasty House, 1st Floor, Bilpam Road, Juba, South Sudan</p>
-                    <p><i class="fas fa-phone"></i> +211 917 119 426</p>
-                    <p><i class="fas fa-envelope"></i> info@dhabconstruction.com</p>
-                </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 Dhab Construction. All Rights Reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elysian Builders. All rights reserved. CA Lic #1023456</p>
             </div>
         </div>
     </footer>
